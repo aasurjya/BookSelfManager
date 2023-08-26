@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getAllBooks = void 0;
+exports.hello = exports.createBook = exports.getAllBooks = void 0;
 const Books_1 = __importDefault(require("../types/Books"));
 const getAllBooks = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
@@ -24,6 +24,21 @@ const getAllBooks = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     }
 });
 exports.getAllBooks = getAllBooks;
+const createBook = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const { title, author, publishedYear } = req.body;
+        const newBook = yield Books_1.default.create({ title, author, publishedYear });
+        res.status(201).json(newBook);
+    }
+    catch (error) {
+        res.status(500).json({ error: 'An error occurred while creating the book.' });
+    }
+});
+exports.createBook = createBook;
+const hello = (req, res) => {
+    console.log("hello");
+};
+exports.hello = hello;
 // export const getBookById = async (req: Request, res: Response) => {
 //   try {
 //     const bookId = req.params.id;

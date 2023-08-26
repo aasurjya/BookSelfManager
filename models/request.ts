@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import Book from '../types/Books';
 
+
 export const getAllBooks = async (req: Request, res: Response) => {
   try {
     const books = await Book.findAll();
@@ -9,6 +10,19 @@ export const getAllBooks = async (req: Request, res: Response) => {
     res.status(500).json({ error: 'An error occurred while fetching books.' });
   }
 };
+
+export const createBook = async (req: Request, res: Response) => {
+  try {
+    const { title, author, publishedYear } = req.body;
+    const newBook = await Book.create({ title, author, publishedYear });
+    res.status(201).json(newBook);
+  } catch (error) {
+    res.status(500).json({ error: 'An error occurred while creating the book.' });
+  }
+};
+export const hello =  (req: Request, res: Response) => {
+  console.log("hello")
+}
 
 // export const getBookById = async (req: Request, res: Response) => {
 //   try {

@@ -1,14 +1,14 @@
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../db';
 
-class Book extends Model {
+class Books extends Model {
   public id!: string;
   public title!: string;
   public author!: string;
   public publishedYear!: number;
 }
 
-Book.init(
+Books.init(
   {
     id: {
       type: DataTypes.UUID,
@@ -31,10 +31,10 @@ Book.init(
   },
   {
     sequelize,
-    modelName: 'Book',
+    modelName: 'Books',
     tableName: 'books',
   }
 );
 
-export default Book;
-console.log(Book === sequelize.models.Book);
+export default Books;
+console.log(Books === sequelize.models.Books);

@@ -1,8 +1,11 @@
 import  express  from "express";
-import { getAllBooks } from "../models/request";
+import { getAllBooks, createBook, hello} from "../models/request";
 
 const router = express.Router();
 
-router.post('/api/allbooks', getAllBooks);
+router.get("/hello", hello);
+
+router.get('/allbooks', getAllBooks);
+router.post('/Createbooks', createBook);
 
 export default router;
