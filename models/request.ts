@@ -4,10 +4,13 @@ import Book from '../types/Books';
 
 export const getAllBooks = async (req: Request, res: Response) => {
   try {
+    console.log("hello getallbooks");
     const books = await Book.findAll();
-    res.json(books);
+    
+    return res.json(books);
   } catch (error) {
-    res.status(500).json({ error: 'An error occurred while fetching books.' });
+    console.log(error);
+     res.status(500).json({ error: 'An error occurred while fetching books.' });
   }
 };
 
@@ -20,6 +23,8 @@ export const createBook = async (req: Request, res: Response) => {
     res.status(500).json({ error: 'An error occurred while creating the book.' });
   }
 };
+
+
 export const hello =  (req: Request, res: Response) => {
   console.log("hello")
 }

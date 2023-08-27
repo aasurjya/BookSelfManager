@@ -16,10 +16,12 @@ exports.hello = exports.createBook = exports.getAllBooks = void 0;
 const Books_1 = __importDefault(require("../types/Books"));
 const getAllBooks = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
+        console.log("hello getallbooks");
         const books = yield Books_1.default.findAll();
-        res.json(books);
+        return res.json(books);
     }
     catch (error) {
+        console.log(error);
         res.status(500).json({ error: 'An error occurred while fetching books.' });
     }
 });
