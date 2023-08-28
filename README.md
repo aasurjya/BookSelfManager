@@ -25,4 +25,13 @@
 
 ![image](https://github.com/aasurjya/BookSelfManager/assets/44926849/a81c7be9-7a9c-4c15-8c38-f4532de96651)
 
+![image](https://github.com/aasurjya/BookSelfManager/assets/44926849/4963f15a-6a94-4576-8365-d392495847e8)
+
+![image](https://github.com/aasurjya/BookSelfManager/assets/44926849/9209232f-255f-4edc-ad4a-97a31bf67d45)
+
+![image](https://github.com/aasurjya/BookSelfManager/assets/44926849/72a6306a-eaca-46ce-8f76-a127a801a5e5)
+
+
+
+
 
