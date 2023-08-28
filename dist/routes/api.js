@@ -8,5 +8,8 @@ const request_1 = require("../models/request");
 const router = express_1.default.Router();
 router.get("/hello", request_1.hello);
 router.get('/allbooks', request_1.getAllBooks);
+router.get('/getBooksByID/:id', request_1.getBookById);
 router.post('/Createbooks', request_1.createBook);
+router.delete('/deleteBook/:id', request_1.deleteBook);
+// router.put('/updateBooks', deleteBook);
 exports.default = router;
