@@ -11,5 +11,3 @@ const sequelize = new Sequelize('Books', 'root', 'password', {
 });
 
 export default sequelize;
-
-
